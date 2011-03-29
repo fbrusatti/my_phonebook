@@ -9,7 +9,7 @@ gem 'haml'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails'
+  gem 'cucumber-rails'
   gem 'capybara'
   gem 'database_cleaner'
 end

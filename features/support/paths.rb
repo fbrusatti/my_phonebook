@@ -9,12 +9,15 @@ module NavigationHelpers
     case page_name
 
     when /the home\s?page/
-      root_path
+      '/'
     when /the list of contacts/
       contacts_path
 
-#   when /^(.*)'s profile page$/i
-#     user_profile_path(User.find_by_login($1))
+    # Add more mappings here.
+    # Here is an example that pulls values out of the Regexp:
+    #
+    #   when /^(.*)'s profile page$/i
+    #     user_profile_path(User.find_by_login($1))
 
     else
       begin
