@@ -1,33 +1,33 @@
 - title "Contact"
 
+%h1.center
+  Contact View
+
+%hr.clear
+
 .container
+  .column.span-10.prepend-2
+    .span-8.bold.coolfont
+      = @contact.full_name
 
-  .column.span-4.bold
-    First Name:
-  .column.span-8
-    = @contact.first_name
+    .span-8.bold.emailfont
+      = @contact.email
 
-%p
-  %strong Last Name:
-  = @contact.last_name
+    .span-8.bold
+      = @contact.phone
 
-%p
-  %strong Email:
-  = @contact.email
+    - if @contact.company
+      .span-2.bold
+        Company:
+      .span-8
+        = @contact.company
 
-%p
-  %strong Phone:
-  = @contact.phone
+  .column.span-10
+    .span-10.prepend-2
+      = image_tag @contact.avatar(:thumb)
 
-%p
-  %strong Picture:
-  = image_tag @contact.avatar(:thumb)
 
-%p
-  %strong Company:
-  = @contact.company
-
-%p
+.center
   = link_to "Edit", edit_contact_path(@contact)
   |
   = link_to "Destroy", @contact, :confirm => 'Are you sure?', :method => :delete

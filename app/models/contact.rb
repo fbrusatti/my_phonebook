@@ -5,7 +5,7 @@ class Contact < ActiveRecord::Base
   belongs_to :company
 
   # == Validations
-  validates :first_name, :presence => true
+  validates :first_name, :last_name, :presence => true
 
   validates :email,
             :presence => true,   
@@ -19,4 +19,9 @@ class Contact < ActiveRecord::Base
     :styles => { :thumb => "100x100>" },
     :default_url => "/images/dummy_100x100.png",
     :path => "public/system/:attachment/:id/:style/:basename.:extension"
+
+
+  def full_name
+    [self.last_name, self.first_name].join(', ')
+  end
 end

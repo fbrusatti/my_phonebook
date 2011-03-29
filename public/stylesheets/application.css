@@ -13,8 +13,22 @@ a {
   height: 0;
   overflow: hidden; }
 
+.center{
+	text-align:center;
+}
+
 .bold{
-  font: bolder;
+  font-weight: bold; 
+}
+
+.coolfont {
+  font-family: 'Architects Daughter', arial, serif;
+  font-size: 32px;
+}
+
+.emailfont{
+  font-family: 'Calligraffitti', arial, serif;
+  font-size: 22px;
 }
 
 #container {
