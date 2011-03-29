@@ -3,7 +3,6 @@
 %h1.coolfont
   Welcome to My Phonebook
 
-
 .container
   .column.span-3.prepend-3
     Search Contact
@@ -20,12 +19,16 @@
 
   %hr.clear
 
-  #results
+  .column.span-3.prepend-3
+    #results
 
 
-= link_to 'All contacts', contacts_path()
+%div{:style => "float:right;"}
+  = link_to 'All contacts', contacts_path()
 %br
-= link_to 'All companies', companies_path()
+%div{:style => "float:right;"}
+  = link_to 'All companies', companies_path()
+
 
 :javascript
   $(document).ready(function() {
