@@ -21,9 +21,16 @@
     = f.text_field :phone
 
   %p
+    .tinygray
+      To see user post, user should have the right permissions
+    = f.label :twitter_handler
+    %br
+    = f.text_field :twitter_handler
+
+  %p
     = f.label :company
     %br
-    = f.select :company, options_for_select(Company::COMPANY_SELECT_OPTIONS, @contact.company)
+    = select_tag "contact[company_attributes][name]", options_for_select(Company::COMPANY_SELECT_OPTIONS, @contact.company)
 
   %p
     = image_tag @contact.avatar(:thumb)

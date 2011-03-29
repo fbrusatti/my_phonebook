@@ -8,6 +8,11 @@ class Company < ActiveRecord::Base
   validates :name, :presence => true, :uniqueness => true
 
 
-  COMPANY_SELECT_OPTIONS = [['Select Company', nil]] + Company.all.map{|x| [x.name, x.id]}
+  COMPANY_SELECT_OPTIONS = ['Select Company'] + Company.all
+
+  def to_s
+    name
+  end
 
 end
+

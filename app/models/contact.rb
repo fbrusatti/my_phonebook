@@ -1,5 +1,5 @@
 class Contact < ActiveRecord::Base
-  attr_accessible :first_name, :last_name, :email, :phone, :avatar, :company
+  attr_accessible :first_name, :last_name, :email, :phone, :avatar, :company, :twitter_handler, :company_attributes
 
   # == Associations
   belongs_to :company
@@ -24,4 +24,17 @@ class Contact < ActiveRecord::Base
   def full_name
     [self.last_name, self.first_name].join(', ')
   end
+
+  def company_attributes=(company)
+    self.company = Company.find_by_name(company[:name])
+  end
+
+  def twitters
+    Twitter::Search.new.from(self.twitter_handler).fetch if self.twitter_handler 
+  end
 end
+
+
+
+
+

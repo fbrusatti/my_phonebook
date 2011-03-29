@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110329075438) do
+ActiveRecord::Schema.define(:version => 20110329083735) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20110329075438) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.integer  "company_id"
+    t.string   "twitter_handler"
   end
 
 end

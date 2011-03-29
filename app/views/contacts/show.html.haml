@@ -13,19 +13,34 @@
     .span-8.bold.emailfont
       = @contact.email
 
-    .span-8.bold
+    .span-8
       = @contact.phone
 
     - if @contact.company
       .span-2.bold
         Company:
-      .span-8
+      .span-6
         = @contact.company
 
   .column.span-10
     .span-10.prepend-2
       = image_tag @contact.avatar(:thumb)
+  .clear
 
+
+  %hr.clear
+  %hr.clear
+
+  - if @contact.twitter_handler
+    .column.span-24.prepend-2
+      .span-8.bold
+        Twitters
+      .clear
+      .span-18
+        - @contact.twitters.each do |twitter|
+          .twitter_box
+            = twitter.text
+          %br
 
 .center
   = link_to "Edit", edit_contact_path(@contact)

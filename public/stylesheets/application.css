@@ -21,6 +21,11 @@ a {
   font-weight: bold; 
 }
 
+.tinygray{
+  color:gray;
+  font-size: 9px;
+}
+
 .coolfont {
   font-family: 'Architects Daughter', arial, serif;
   font-size: 32px;
@@ -122,3 +127,13 @@ a {
 	background:#0174BB none repeat scroll 0% 0%;
 }
 
+
+/***************/
+/* twitter box*/
+/***************/
+.twitter_box{
+  -moz-border-radius:    5px;
+  -webkit-border-radius: 5px;
+  border-radius:         5px;
+  background-color: #CEE3F6;
+}
