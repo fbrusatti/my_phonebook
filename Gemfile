@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.5'
 gem 'sqlite3'
 
+gem 'paperclip'
+
 gem 'jquery-rails'
 gem 'nifty-generators'
 gem 'haml'

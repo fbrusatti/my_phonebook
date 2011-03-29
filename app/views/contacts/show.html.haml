@@ -14,6 +14,10 @@
   = @contact.phone
 
 %p
+  %strong Picture:
+  = image_tag @contact.avatar(:thumb)
+
+%p
   = link_to "Edit", edit_contact_path(@contact)
   |
   = link_to "Destroy", @contact, :confirm => 'Are you sure?', :method => :delete

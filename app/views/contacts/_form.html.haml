@@ -1,20 +1,28 @@
-= form_for @contact do |f|
+= form_for @contact, :html => {:multipart => true} do |f|
   = f.error_messages
   %p
     = f.label :first_name
     %br
     = f.text_field :first_name
+
   %p
     = f.label :last_name
     %br
     = f.text_field :last_name
+
   %p
     = f.label :email
     %br
     = f.text_field :email
+
   %p
     = f.label :phone
     %br
     = f.text_field :phone
+
+  %p
+    = image_tag @contact.avatar(:thumb)
+    = f.file_field :avatar
+
   %p
     = f.submit

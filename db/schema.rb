@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110329052931) do
+ActiveRecord::Schema.define(:version => 20110329073057) do
 
   create_table "contacts", :force => true do |t|
     t.string   "first_name"
@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(:version => 20110329052931) do
     t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
 end
