@@ -38,4 +38,8 @@ class ContactsController < ApplicationController
     @contact.destroy
     redirect_to contacts_url, :notice => "Contact destroyed."
   end
+
+  def search
+    @contacts = Contact.search(params[:query], params[:column])
+  end
 end

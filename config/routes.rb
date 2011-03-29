@@ -1,9 +1,9 @@
 Phonebook::Application.routes.draw do
 
-  resources :companies do 
-    resources :contacts
+  resources :companies
+  resources :contacts do
+     get :search, :on => :collection
   end
-  resources :contacts
 
   root :to => "landing#index"
 

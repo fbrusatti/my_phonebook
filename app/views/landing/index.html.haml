@@ -1,4 +1,61 @@
 - title "Phonebook"
 
-%h1
+%h1.coolfont
   Welcome to My Phonebook
+
+
+.container
+  .column.span-3.prepend-3
+    Search Contact
+  .column.span-9
+    = text_field_tag 'query', '', :id => 'search_text', :size => 40
+  .column.span-2
+    = button_to 'Search', '', :id => 'search_button'
+  .column.span-4
+    = select_tag 'search_column', options_for_select([['First Name', 'first_name'], ['Last Name', 'last_name']])
+
+  .column.span-2
+    = image_tag 'spinner.gif', :class => 'hide', :id => 'spin'
+  .clear
+
+  %hr.clear
+
+  #results
+
+
+= link_to 'All contacts', contacts_path()
+%br
+= link_to 'All companies', companies_path()
+
+:javascript
+  $(document).ready(function() {
+
+    $("#search_button").click( function(){
+      $("#spin").show();
+
+      query = $("#search_text").attr('value');
+      column = $("#search_column").attr('value');
+
+      $.ajax({
+          type: "GET",
+          url: "/contacts/search.js",
+          data: "query=" + query + "&column=" + column,
+          beforeSend: function(){
+              if (query == ''){
+                alert("Query can't be empty");
+                return false;
+              }
+              $("#spin").show();
+          },
+          complete: function() {
+              $("#spin").hide();
+          }
+      });
+
+      return false;
+    });
+  })
+
+
+
+

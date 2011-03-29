@@ -24,4 +24,6 @@
 %p= link_to "New Company", new_company_path
 
 .paginate
-  = will_paginate @courses
+  = will_paginate @companies
+
+= link_to 'Main Site', root_path()

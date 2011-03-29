@@ -1,5 +1,8 @@
 - title "Contacts"
 
+%h1
+  Contacts List
+
 %table
   %tr
     %th &nbsp;
@@ -23,3 +26,4 @@
 .paginate
   = will_paginate @contacts
 
+= link_to 'Main Site', root_path()

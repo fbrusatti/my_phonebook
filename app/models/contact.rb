@@ -21,9 +21,9 @@ class Contact < ActiveRecord::Base
     :path => "public/system/:attachment/:id/:style/:basename.:extension"
 
 
-  def self.search(search)
+  def self.search(search, column='first_name')
     if search
-      where('name LIKE ?', "%#{search}%")
+      where("#{column} LIKE ?", "%#{search}%")
     else
       scoped
     end
