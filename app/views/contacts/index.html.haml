@@ -2,12 +2,14 @@
 
 %table
   %tr
+    %th &nbsp;
     %th First name
     %th Last name
     %th Email
     %th Phone
   - for contact in @contacts
     %tr
+      %td= image_tag contact.avatar(:thumb)
       %td= contact.first_name
       %td= contact.last_name
       %td= contact.email
