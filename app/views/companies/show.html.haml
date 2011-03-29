@@ -1,22 +1,54 @@
 - title "Company"
 
-%p
-  %strong Name:
-  = @company.name
-%p
-  %strong Phone:
-  = @company.phone
-%p
-  %strong Address:
-  = @company.address
-%p
-  %strong City:
-  = @company.city
-%p
-  %strong Country:
-  = @company.country
 
-%p
+%h1="#{@company.name}"
+  
+
+.container
+  .column.span-10.prepend-1
+    .span-2.bold
+      Name:
+    .span-6
+      = @company.name
+    .clear
+
+    .span-2.bold
+      Phone:
+    .span-6
+      = @company.phone
+    .clear
+
+    .span-2.bold
+      Address:
+    .span-6
+      = @company.address
+    .clear
+
+    .span-2.bold
+      City:
+    .span-6
+      = @company.city
+    .clear
+
+    .span-2.bold
+      Country:
+    .span-6
+      = @company.country
+    .clear
+
+  .column.span-10.prepend-1
+    .span-8.bold
+      Contacts into this Company
+    .clear
+    .span-10
+      - @company.contacts.each do |contact|
+        .twitter_box
+          = link_to contact.full_name, contact_path(contact)
+        %br
+
+%hr.clear
+
+.center
   = link_to "Edit", edit_company_path(@company)
   |
   = link_to "Destroy", @company, :confirm => 'Are you sure?', :method => :delete

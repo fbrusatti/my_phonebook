@@ -21,6 +21,15 @@ class Contact < ActiveRecord::Base
     :path => "public/system/:attachment/:id/:style/:basename.:extension"
 
 
+  def self.search(search)
+    if search
+      where('name LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
+
+
   def full_name
     [self.last_name, self.first_name].join(', ')
   end

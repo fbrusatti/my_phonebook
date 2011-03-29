@@ -1,5 +1,8 @@
 - title "Companies"
 
+%h1 
+  Companies List
+
 %table
   %tr
     %th Name
@@ -19,3 +22,6 @@
       %td= link_to 'Destroy', company, :confirm => 'Are you sure?', :method => :delete
 
 %p= link_to "New Company", new_company_path
+
+.paginate
+  = will_paginate @courses

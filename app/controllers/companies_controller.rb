@@ -1,6 +1,7 @@
 class CompaniesController < ApplicationController
   def index
-    @companies = Company.all
+    @companies = Company.all.paginate(:per_page => 3, :page => params[:page])
+
   end
 
   def show
