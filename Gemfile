@@ -6,11 +6,13 @@ gem 'sqlite3'
 gem 'jquery-rails'
 gem 'nifty-generators'
 gem 'haml'
-gem "decent_exposure"
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails'
   gem 'capybara'
   gem 'database_cleaner'
 end
+gem "mocha", :group => :test
+
+
