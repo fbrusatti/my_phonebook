@@ -1,14 +1,20 @@
 - title "Contact"
 
-%p
-  %strong First Name:
-  = @contact.first_name
+.container
+
+  .column.span-4.bold
+    First Name:
+  .column.span-8
+    = @contact.first_name
+
 %p
   %strong Last Name:
   = @contact.last_name
+
 %p
   %strong Email:
   = @contact.email
+
 %p
   %strong Phone:
   = @contact.phone
@@ -16,6 +22,10 @@
 %p
   %strong Picture:
   = image_tag @contact.avatar(:thumb)
+
+%p
+  %strong Company:
+  = @contact.company
 
 %p
   = link_to "Edit", edit_contact_path(@contact)

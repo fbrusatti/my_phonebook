@@ -1,0 +1,24 @@
+- title "Company"
+
+%p
+  %strong Name:
+  = @company.name
+%p
+  %strong Phone:
+  = @company.phone
+%p
+  %strong Address:
+  = @company.address
+%p
+  %strong City:
+  = @company.city
+%p
+  %strong Country:
+  = @company.country
+
+%p
+  = link_to "Edit", edit_company_path(@company)
+  |
+  = link_to "Destroy", @company, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", companies_path

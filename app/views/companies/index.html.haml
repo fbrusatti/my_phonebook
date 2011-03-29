@@ -1,0 +1,21 @@
+- title "Companies"
+
+%table
+  %tr
+    %th Name
+    %th Phone
+    %th Address
+    %th City
+    %th Country
+  - for company in @companies
+    %tr
+      %td= company.name
+      %td= company.phone
+      %td= company.address
+      %td= company.city
+      %td= company.country
+      %td= link_to 'Show', company
+      %td= link_to 'Edit', edit_company_path(company)
+      %td= link_to 'Destroy', company, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Company", new_company_path

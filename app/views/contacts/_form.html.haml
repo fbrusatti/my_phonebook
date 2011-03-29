@@ -21,6 +21,11 @@
     = f.text_field :phone
 
   %p
+    = f.label :company
+    %br
+    = f.select :company, options_for_select(Company::COMPANY_SELECT_OPTIONS, @contact.company)
+
+  %p
     = image_tag @contact.avatar(:thumb)
     = f.file_field :avatar
 

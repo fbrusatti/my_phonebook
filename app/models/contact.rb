@@ -1,5 +1,8 @@
 class Contact < ActiveRecord::Base
-  attr_accessible :first_name, :last_name, :email, :phone, :avatar
+  attr_accessible :first_name, :last_name, :email, :phone, :avatar, :company
+
+  # == Associations
+  belongs_to :company
 
   # == Validations
   validates :first_name, :presence => true
