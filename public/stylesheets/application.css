@@ -59,3 +59,48 @@ a {
     margin: 8px 10px; }
   .error_messages ul {
     margin: 0; }
+
+/************************/
+/* Style to Pagination */
+.pagination {
+	clear: both;
+	text-align:center;
+  font-weight: bolder;
+  padding:10px 0px 3px;
+}
+.pagination a, .pagination strong.pagination-current {
+	padding:0.5em;
+  	text-decoration: none;
+  	font: 13px "Trebuchet MS", Helvetica, Khalid, Garuda, sans-serif;
+  	font-weight:bold;
+}
+
+.pagination .current{
+  color:#666;
+  font: 13px "Trebuchet MS", Helvetica, Khalid, Garuda, sans-serif;
+  font-weight:bold;
+}
+
+
+.pagination div {
+	display:inline;
+	padding:0em;
+}
+.pagination strong, .pagination a {
+
+	background-color:#283d50;
+	border:2px solid #476c8e;
+	margin:0px 0.25em;
+	padding:2px 5px;
+	color:white;
+}
+.pagination a:hover {
+	background-color:red;
+	text-decoration:none;
+	border:2px solid #a90303;
+
+}
+.pagination strong {
+	background:#0174BB none repeat scroll 0% 0%;
+}
+

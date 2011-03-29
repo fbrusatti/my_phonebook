@@ -4,6 +4,7 @@ gem 'rails', '3.0.5'
 gem 'sqlite3'
 
 gem 'paperclip'
+gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => 'rails3'
 
 gem 'jquery-rails'
 gem 'nifty-generators'

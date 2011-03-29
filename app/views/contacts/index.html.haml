@@ -17,3 +17,7 @@
       %td= link_to 'Destroy', contact, :confirm => 'Are you sure?', :method => :delete
 
 %p= link_to "New Contact", new_contact_path
+
+.paginate
+  = will_paginate @courses
+
