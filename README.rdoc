@@ -1,6 +1,6 @@
 = My Phonebook
 
-It's a demo application to show my RoR skills
+It's a demo application built in a couple of hours to show a demo to a company 
 
 Phonebook is a single-user (no login) application for keeping track of the people you work with. 
 
